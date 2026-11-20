@@ -3,10 +3,8 @@ import { PiedPage } from './../composants/pied-page/pied-page';
 import { EnTete } from './../composants/en-tete/en-tete';
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { CarteEvenement } from '../composants/carte-evenement/carte-evenement';
-import { Evenement } from '../models/evenement';
 @Component({
-  imports: [EnTete,PiedPage,CarteEvenement,RouterOutlet],
+  imports: [EnTete,PiedPage,RouterOutlet],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',

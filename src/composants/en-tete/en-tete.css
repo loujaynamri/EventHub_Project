@@ -14,18 +14,15 @@ header {
     padding: 0 40px;
 }
 
-.logo {
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-}
-.description {
-    color: white;
-    font-size: 17px;
-    margin: auto;
+.logo a {
+  font-size: 25px;
+  font-weight: bold;
+  color: #1769aa;
+  text-decoration: none;
 }
 .navigation {
   display: flex;
+  align-items: center;
   gap: 25px;
 }
 .navigation a,

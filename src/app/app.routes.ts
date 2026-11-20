@@ -6,7 +6,7 @@ export const routes: Routes =
     path: '',redirectTo:'evenements',pathMatch:'full'
   },
   {
-    path:'evnements',component:ListeEvenements
+    path:'evenements',component:ListeEvenements
   },
   {
     path:'evenements/:id',loadComponent:()=>

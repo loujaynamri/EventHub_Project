@@ -1,11 +1,48 @@
- <header>
-      <div class="logo">
-        <a routerLink="/evenemrnts">Event Hub</a>
-      </div>
-      <nav class="navigation">
-      <a routerLink="=/evenemrnts"
-      routerLinkActive="active">
-        Evénements
+
+<header>
+  <div class="logo">
+    <a routerLink="/evenements">Event Hub</a>
+  </div>
+
+  <nav class="navigation">
+    <a routerLink="/evenements"
+       routerLinkActive="active">
+      Événements
+    </a>
+
+    @if (auth.estOrganisateur()) {
+      <a routerLink="/nouvel-evenement"
+         routerLinkActive="active">
+        Nouvel événement
       </a>
-      </nav>
+    }
+
+    @if (auth.utilisateur()) {
+      <a routerLink="/mes-reservations"
+         routerLinkActive="active">
+        Mes réservations
+        <span class="badge">
+          {{ reserve.nbRes() }}
+        </span>
+      </a>
+    }
+
+    <div class="auth">
+      @if (auth.utilisateur(); as user) {
+        <span class="nom-utilisateur">
+          Bonjour, {{ user.nom }}
+        </span>
+
+        <button (click)="deconnexion()">
+          Déconnexion
+        </button>
+      } @else {
+        <a routerLink="/connexion"
+           routerLinkActive="active">
+          Connexion
+        </a>
+      }
+    </div>
+  </nav>
 </header>
+

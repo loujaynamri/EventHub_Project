@@ -1,1 +1,36 @@
-<p>connexion works!</p>
+
+<div class="form-connexion">
+
+  <h2>Connexion à EventHub</h2>
+
+  <form (ngSubmit)="seConnecter()">
+
+    <label>Identifiant</label>
+
+    <input
+      type="email"
+      name="identifiant"
+      [(ngModel)]="identifiant"
+      placeholder="exemple@iset.tn"
+      required
+    >
+
+    <label>Mot de passe</label>
+
+    <input
+      type="password"
+      name="motDePasse"
+      [(ngModel)]="motDePasse"
+      placeholder="Votre mot de passe"
+      required
+    >
+
+    @if (erreur) {
+      <p class="erreur">{{ erreur }}</p>
+    }
+
+    <button type="submit">Se connecter</button>
+
+  </form>
+
+</div>

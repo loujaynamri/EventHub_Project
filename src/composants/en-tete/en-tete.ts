@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
-
+import { reserve } from './../../services/reserve';
+import { Component ,inject} from '@angular/core';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { auth } from '../../services/auth';
 @Component({
   imports: [RouterLink,RouterLinkActive],
   selector: 'app-en-tete',
@@ -9,5 +10,11 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   standalone:true
 })
 export class EnTete {
-
+  auth=inject(auth);
+  reserve=inject(reserve);
+  router=inject(Router);
+  deconnexion() {
+    this.auth.deconnecter();
+    this.router.navigate(['/connexion']);
+  }
 }
