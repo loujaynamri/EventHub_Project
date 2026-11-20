@@ -1,0 +1,17 @@
+
+footer {
+    background-color:  rgb(127, 180, 201);
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 30px;
+}
+
+footer h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+footer p {
+    font-size: 15px;
+}

@@ -1,1 +1,9 @@
-<p>liste-evenements works!</p>
+
+<div class="liste-evenements">
+
+  @for (e of event; track e.id) {
+    <app-carte-evenement [evenement]="e">
+    </app-carte-evenement>
+  }
+
+</div>

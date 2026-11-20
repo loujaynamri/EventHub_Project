@@ -1,0 +1,57 @@
+
+.carte-evenement {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+
+.carte-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.categorie {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+  padding: 5px 10px;
+  border-radius: 15px;
+}
+
+.prix {
+  color: #15803d;
+  font-weight: bold;
+}
+
+h2 {
+  color: #1e3a8a;
+  font-size: 20px;
+}
+
+.description {
+  color: #666;
+}
+
+.informations p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}

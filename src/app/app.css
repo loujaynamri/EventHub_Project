@@ -1,0 +1,17 @@
+
+.liste-evenements {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.footer-placeholder {
+  min-height: 100px;
+  text-align: center;
+  padding: 30px;
+  color: #666;
+}

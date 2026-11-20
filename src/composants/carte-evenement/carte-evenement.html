@@ -1,0 +1,45 @@
+<div class="carte-evenement">
+  <div class="carte-header">
+    <span class="categorie">{{ evenement.categorie }}</span>
+    <span class="prix">
+      {{ evenement.gratuit ? 'Gratuit' : 'Payant' }}
+    </span>
+  </div>
+  <h2>{{ evenement.titre }}</h2>
+  <p class="description">
+    {{ evenement.description }}
+  </p>
+  <div class="informations">
+    <p>
+      <strong>Club :</strong>
+      {{ evenement.club }}
+    </p>
+    <p>
+      <strong>Date :</strong>
+      {{ evenement.date | date:'dd/MM/yyyy' }}
+    </p>
+    <p>
+      <strong>Lieu :</strong>
+      {{ evenement.lieu }}
+    </p>
+    <p>
+      <strong>Capacité :</strong>
+      {{ evenement.capacite }} places
+    </p>
+    <p>
+      <strong>Places réservées :</strong>
+      {{ evenement.placesReservees }}
+    </p>
+    <p>
+      <strong>Places disponibles :</strong>
+      {{ evenement.capacite - evenement.placesReservees }}
+    </p>
+  </div>
+  <button
+    [disabled]="evenement.placesReservees >= evenement.capacite">
+    {{ evenement.placesReservees >= evenement.capacite
+        ? 'Complet'
+        : 'Réserver' }}
+  </button>
+</div>
+

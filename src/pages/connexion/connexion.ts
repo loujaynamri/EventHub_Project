@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
+import { EnTete } from '../../composants/en-tete/en-tete';
 
 @Component({
-  imports: [],
+  imports: [EnTete],
   selector: 'app-connexion',
   styleUrl: './connexion.css',
   templateUrl: './connexion.html',

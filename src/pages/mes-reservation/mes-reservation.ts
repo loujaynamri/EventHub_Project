@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
+import { EnTete } from '../../composants/en-tete/en-tete';
 
 @Component({
-  imports: [],
+  imports: [EnTete],
   selector: 'app-mes-reservation',
   styleUrl: './mes-reservation.css',
   templateUrl: './mes-reservation.html',
