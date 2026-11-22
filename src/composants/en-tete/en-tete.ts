@@ -10,11 +10,12 @@ import { auth } from '../../services/auth';
   standalone:true
 })
 export class EnTete {
-  auth=inject(auth);
-  reserve=inject(reserve);
-  router=inject(Router);
-  deconnexion() {
-    this.auth.deconnecter();
-    this.router.navigate(['/connexion']);
+  protected readonly session = inject(Session);
+  protected readonly reservations = inject(Reservations);
+  private readonly router = inject(Router);
+
+  protected deconnecter(): void {
+    this.session.deconnecter();
+    this.router.navigateByUrl('/evenements');
   }
 }

@@ -1,57 +1,13 @@
-
-.carte-evenement {
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  padding: 20px;
-  border-radius: 12px;
-  background-color: white;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
-}
-
-.carte-header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 15px;
-}
-
-.categorie {
-  background-color: #dbeafe;
-  color: #1d4ed8;
-  padding: 5px 10px;
-  border-radius: 15px;
-}
-
-.prix {
-  color: #15803d;
-  font-weight: bold;
-}
-
-h2 {
-  color: #1e3a8a;
-  font-size: 20px;
-}
-
-.description {
-  color: #666;
-}
-
-.informations p {
-  margin: 8px 0;
-  font-size: 14px;
-}
-
-button {
-  width: 100%;
-  padding: 10px;
-  background-color: #2563eb;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-button:disabled {
-  background-color: gray;
-  cursor: not-allowed;
-}
+.carte { display: flex; flex-direction: column; gap: .3rem; height: 100%; padding: 1rem; background: #fff; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,.12); }
+.carte.termine { opacity: .55; filter: grayscale(1); }
+.haut { display: flex; justify-content: space-between; align-items: center; }
+.mention { font-size: .8rem; font-weight: bold; color: #6b7280; border: 1px solid #9ca3af; border-radius: 4px; padding: 0 .4rem; }
+h3 { margin: .4rem 0 0; font-size: 1.1rem; }
+h3 a { text-decoration: none; color: inherit; }
+h3 a:hover { color: var(--couleur-principale); }
+p { margin: 0; font-size: .92rem; }
+.club { color: #6b7280; }
+.prix { font-weight: 600; }
+.places { font-weight: 600; color: #b45309; }
+.btn { margin-top: auto; align-self: flex-start; font-size: .85rem; }
+.btn.actif { background: #fde68a; }

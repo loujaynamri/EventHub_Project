@@ -1,0 +1,5 @@
+.badge { display: inline-block; padding: .15rem .6rem; border-radius: 999px; color: #fff; font-size: .8rem; font-weight: 600; background: #6b7280; }
+.atelier { background: #2563eb; }
+.conference { background: #7c3aed; }
+.competition { background: #dc2626; }
+.sortie { background: #059669; }

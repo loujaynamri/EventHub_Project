@@ -10,30 +10,30 @@
       Événements
     </a>
 
-    @if (auth.estOrganisateur()) {
+    @if (session.estOrganisateur()) {
       <a routerLink="/nouvel-evenement"
          routerLinkActive="active">
         Nouvel événement
       </a>
     }
 
-    @if (auth.utilisateur()) {
+    @if (session.connecte()) {
       <a routerLink="/mes-reservations"
          routerLinkActive="active">
         Mes réservations
         <span class="badge">
-          {{ reserve.nbRes() }}
+          {{ reservations.nombre() }}
         </span>
       </a>
     }
 
     <div class="auth">
-      @if (auth.utilisateur(); as user) {
+      @if (session.utilisateur(); as utilisateur) {
         <span class="nom-utilisateur">
-          Bonjour, {{ user.nom }}
+          Bonjour, {{ utilisateur.nom }}
         </span>
 
-        <button (click)="deconnexion()">
+        <button (click)="deconnecter()">
           Déconnexion
         </button>
       } @else {
